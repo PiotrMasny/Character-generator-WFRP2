@@ -27,8 +27,12 @@
                 case 'dwarf':
                     require 'races/Dwarf.php';
                     $dwarf1 = new Dwarf;
+                    session_start();
+                    $_SESSION['dwarf1'] = $dwarf1;
                     echo "<h3>Dwarf</h3>";
                     $dwarf1->randomizeStatistics();
+                    echo "<h3>Shallya's Mercy</h3>";
+                    $dwarf1->shallyasMercy();
                 break;
                 case 'elf':
                     require 'races/Elf.php';
