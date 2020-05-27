@@ -29,6 +29,8 @@ class Dwarf
 
     public function randomizeStatistics() {
         //main profile --------------------------------------------------------------------------------
+        echo "<h3>Dwarf</h3>";
+        
         $this->wsRand = rand(2,20);
         $this->ws += $this->wsRand;
         echo "Weapon Skill: $this->ws <br />";
@@ -149,11 +151,11 @@ class Dwarf
             default:
             break;
         }
-        echo "Fate Points: $this->fp <br />";
+        echo "Fate Points: $this->fp <br /><br />";
     }
     //-------------------------------------------------------------------------------------------------
     public function shallyasMercy() {
-        echo "<form action=\"checkMercy.php\" method=\"post\">";
+        echo "<form action=\"newDwarf.php\" method=\"post\">";
         if ($this->wsRand < 11) 
             echo "Weapon Skill: $this->ws"."<input type=\"submit\" name=\"submitDwarfWs\" value=\"Mercy\" /> <br />";
         if ($this->bsRand < 11)
